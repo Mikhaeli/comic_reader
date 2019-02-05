@@ -1,0 +1,16 @@
+#header {
+  
+}
+
+#navbar {
+  opacity: 0.0;
+  width: 100vw;
+}
+
+#navbar:hover {
+   opacity: 1.0;
+}
+
+#picture {
+  height: 100vh;
+}
