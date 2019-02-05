@@ -12,10 +12,6 @@ $(document).ready(function() {
     var comicPage = "http://fullcomic.pro/read-comic-online-doctor-fate-1987-issue-1-31720.html?readType=1";
     var url = "https://meatysauce.herokuapp.com/" + comicPage;
 
-
-    var navHeader = "<button id =\"prev\" class=\"btn\">Prev</button>" +
-                    "<button id =\"next\" class=\"btn\">Next</button>";
-                      console.log("Okay fuck me what si going on");
      $.get(url, function(data, status) {
       //TODO
       //Get title from comic webpage
@@ -44,16 +40,17 @@ $(document).ready(function() {
           }
         }
 
-        $("#page").html(
+        /*$("#page").html(
           '<img id="picture" src="' + pictures[pageNum - 1] + '">'
-        );
+        );*/
       }
-
+      /*
       turnToPage();
 
        $("#page").click(function() {
        turnToPage(1, "+");
       });
+      */
     });
 
   });
