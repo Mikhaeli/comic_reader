@@ -14,3 +14,5 @@ def read():
     if request.method == "POST":
         html = simple_get(request.form['comicPageLink'])
         pictures = image_scrape(html)
+        title = get_title(html)
+        return render_template("read.html", pictures=pictures, title=title)

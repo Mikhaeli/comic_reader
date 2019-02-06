@@ -40,10 +40,9 @@ def log_error(e):
     print(e)
 
 def get_title(raw_html):
-    soup = BeautifulSoup(raw_html, "html.parser")
+    html = BeautifulSoup(raw_html, "html.parser")
 
-    print(soup.title.text)
-    return soup.title.text
+    return html.title.text
 
 def image_scrape(raw_html):
     image_links = []

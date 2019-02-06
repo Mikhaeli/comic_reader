@@ -12,6 +12,12 @@
   <!--Link to Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
+
+  <script>
+    //var pictures = [{% ', '.join(pictures) %}];
+    var pictures = {{ pictures|tojson }};
+  </script>
+
   <!--Link to Jquery -->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="/static/scriptc.js"></script>
@@ -20,6 +26,7 @@
 <body>
 
   <div id="navbar">
+    <p id="title">{{ %title% }}</p>
     <button id=\ "prev\" class=\ "btn\">Prev</button>
     <button id=\ "next\" class=\ "btn\">Next</button>
   </div>
