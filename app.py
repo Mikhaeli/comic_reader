@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request
 
-from requests import get
-from requests.exceptions import RequestException
-from contextlib import closing
-from bs4 import BeautifulSoup
+from web_scraping import simple_get, image_scrape, get_title
 
 
 app = Flask(__name__)
@@ -15,5 +12,5 @@ def hello_world():
 @app.route('/read', methods = ['GET', 'POST'])
 def read():
     if request.method == "POST":
-        return request.form['comicPageLink']
-        return render_template("read.html")
+        html = simple_get(request.form['comicPageLink'])
+        pictures = image_scrape(html)
