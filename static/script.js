@@ -19,11 +19,7 @@ $(document).ready(function() {
     }
   }
     $("#comicPage").attr("src", pictures[pageNum - 1]);
-    /*
-      $("#comicPage").html(
-        '<img id="picture" src="' + pictures[pageNum - 1] + '">'
-      );
-      */
+
   }
 
     turnToPage();
@@ -31,5 +27,15 @@ $(document).ready(function() {
     $("#comicPage").click(function() {
        turnToPage(1, "+");
     });
+
+    $("#prev").click(function() {
+      turnToPage(1, "-");
+    });
+
+    $("#next").click(function() {
+      turnToPage(1, "+");
+    });
+
+
 
 });
