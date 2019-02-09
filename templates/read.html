@@ -13,9 +13,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
 
-    <script type="text/javascript">
-      var pictures = {{ pictures|tojson|safe }};
-    </script>
+  <script type="text/javascript">
+    var pictures = {
+      {
+        pictures | tojson | safe
+      }
+    };
+  </script>
 
 
   <!--Link to Jquery -->
@@ -27,12 +31,12 @@
 
   <div id="navbar">
     <p id="title">{{ comic_title }}</p>
-    <button id="prevPage" class="btn">Prev</button>
-    <button id="nextPage" class="btn">Next</button>
+    <button id="prevPage" class="navButton btn">Previous</button>
+    <button id="nextPage" class="navButton btn">Next</button>
   </div>
 
   <div id="picture">
-    <img id="comicPage">
+    <img id="comicPage" class="absCenter">
   </div>
 
 </body>
