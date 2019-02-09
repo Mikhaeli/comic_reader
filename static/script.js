@@ -19,23 +19,21 @@ $(document).ready(function() {
     }
   }
     $("#comicPage").attr("src", pictures[pageNum - 1]);
-
   }
 
     turnToPage();
 
-    $("#comicPage").click(function() {
+    $("#picture").click(function() {
        turnToPage(1, "+");
     });
 
-    $("#prev").click(function() {
+    $("#prevPage").click(function() {
       turnToPage(1, "-");
     });
 
-    $("#next").click(function() {
+
+    $("#nextPage").click(function() {
       turnToPage(1, "+");
     });
-
-
 
 });
