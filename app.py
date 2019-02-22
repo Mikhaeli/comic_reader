@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
+import urllib.parse
 
-from web_scraping import simple_get, image_scrape, get_title
+from web_scraping import simple_get, image_scrape, title_scrape
 
 
 app = Flask(__name__)
@@ -11,8 +12,9 @@ def hello_world():
 
 @app.route('/read', methods = ['GET', 'POST'])
 def read():
-    if request.method == "POST":
-        html = simple_get(request.form['comicPageLink'])
+    if request.method == "GET":
+        link = urllib.parse.unquote(request.args['comicPageLink'])
+        html = simple_get(link)
         pictures = image_scrape(html)
         comic_title = title_scrape(html)
 

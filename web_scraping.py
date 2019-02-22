@@ -52,4 +52,5 @@ def image_scrape(raw_html):
     for img in html.find_all('img'):
         image_links.append(img['src'])
 
+    print(image_links)
     return image_links

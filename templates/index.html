@@ -22,8 +22,9 @@
   <div id="comicLink" class="absCenter">
     <div id="comicLinkCenter" class="absCenter">
       <p>Enter link to comic:</p>
-      <form action="/read" method="POST">
-        <input type="text" id="comicPageInput" name="comicPageLink">
+      <form action="/read" method="GET">
+        <!-- <input type="text" id="comicPageInput" name="comicPageLink"> -->
+        <textarea id="comicPageInput" name="comicPageLink">Link to page...</textarea>
         <br>
         <input type="submit" class="navButton btn" value="submit">
       </form>
