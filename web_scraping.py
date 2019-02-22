@@ -40,7 +40,7 @@ def log_error(e):
     """
     print(e)
 
-def get_title(raw_html):
+def title_scrape(raw_html):
     html = BeautifulSoup(raw_html, "html.parser")
 
     return html.title.text

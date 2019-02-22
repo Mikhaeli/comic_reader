@@ -35,10 +35,14 @@ body {
 #comicLink {
   text-align: center;
   background-color: var(--backdrop);
-  width: 30vw;
-  height: 30vh;
+  width: 50vw;
+  height: 50vh;
   border-radius: 30px;
   color: var(--basic-font);
+}
+
+#comicPageInput {
+  width: 30vw;
 }
 
 /*read.html*/
