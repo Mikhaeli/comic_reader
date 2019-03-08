@@ -51,6 +51,4 @@ def image_scrape(raw_html):
     html = BeautifulSoup(raw_html, "html.parser")
     for img in html.find_all('img'):
         image_links.append(img['src'])
-
-    print(image_links)
     return image_links

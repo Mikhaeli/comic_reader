@@ -1,16 +1,16 @@
 $(document).ready(function() {
 
-  var pageNum = 1;
+  var pageNum = 0;
 
   function turnToPage(num, operation) {
     //pageNum starts at 1
     //Easier to display
     if (operation === "+") {
-      if (pageNum += num <= pictures.length) {
+      if (pageNum + num <= pictures.length) {
         pageNum += num;
       }
     } else if (operation === "-") {
-      if ((pageNum -= num >= 1)) {
+      if ((pageNum - num > 1)) {
         pageNum -= num;
       }
     } else if (num && !operation) {
@@ -18,7 +18,8 @@ $(document).ready(function() {
         pageNum = num;
       }
     }
-    $("#comicPage").attr("src", pictures[pageNum - 1]);
+    $("#comicPage").attr("src", pictures[pageNum]);
+    $("#pageno").text(pageNum + 1);
   }
 
   turnToPage();
