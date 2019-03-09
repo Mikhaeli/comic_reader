@@ -1,16 +1,15 @@
 $(document).ready(function() {
 
+  //pageNum refers to index not actual image number
   var pageNum = 0;
 
   function turnToPage(num, operation) {
-    //pageNum starts at 1
-    //Easier to display
     if (operation === "+") {
       if (pageNum + num <= pictures.length) {
         pageNum += num;
       }
     } else if (operation === "-") {
-      if ((pageNum - num > 1)) {
+      if (pageNum - num >= 0) {
         pageNum -= num;
       }
     } else if (num && !operation) {

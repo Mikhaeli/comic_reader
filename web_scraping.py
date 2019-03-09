@@ -4,6 +4,7 @@ from contextlib import closing
 from bs4 import BeautifulSoup
 
 
+#All this shit is stolen
 def simple_get(url):
     """
     Attempts to get the content at `url` by making an HTTP GET request.
@@ -41,6 +42,7 @@ def log_error(e):
     print(e)
 
 def title_scrape(raw_html):
+
     html = BeautifulSoup(raw_html, "html.parser")
 
     return html.title.text

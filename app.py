@@ -15,7 +15,11 @@ def read():
     if request.method == "GET":
         link = urllib.parse.unquote(request.args['comicPageLink'])
         html = simple_get(link)
-        pictures = image_scrape(html)
-        comic_title = title_scrape(html)
 
-        return render_template("read.html", pictures=pictures, comic_title=comic_title)
+        #If html is valid
+        if html is not None:
+            comic_title = title_scrape(html)
+            pictures = image_scrape(html)
+            return render_template("read.html", pictures=pictures, comic_title=comic_title)
+
+        return render_template("error.html", error_message="Invalid html, please check link")

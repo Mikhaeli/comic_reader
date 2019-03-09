@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/static/style.css">
   <!--Link to Jquery -->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-  <!-- No script needed for this page at the moment -->
+  <script type="text/javascript" src="/static/index.js"></script>
 
 </head>
 
@@ -22,9 +22,9 @@
   <div id="comicLink" class="absCenter">
     <div id="comicLinkCenter" class="absCenter">
       <p>Enter link to comic:</p>
-      <form action="/read" method="GET">
+      <form id="pageLinkForm" action="/read" method="GET">
         <!-- <input type="text" id="comicPageInput" name="comicPageLink"> -->
-        <textarea id="comicPageInput" name="comicPageLink">Link to page...</textarea>
+        <textarea id="comicPageInput" name="comicPageLink"></textarea>
         <br>
         <input type="submit" class="navButton btn" value="submit">
       </form>
